@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">percobaanuts</string>
+    <string name="loginemail">Masukkan Email</string>
+    <string name="loginpass">Masukkan Password</string>
+</resources>

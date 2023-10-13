@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="YourDateTextAppearance">
+        <item name="android:textSize">16sp</item> <!-- Ukuran teks tanggal -->
+        <item name="android:textColor">@color/black</item> <!-- Warna teks tanggal -->
+    </style>
+
+    <style name="YourWeekDayTextAppearance">
+        <item name="android:textSize">14sp</item> <!-- Ukuran teks hari -->
+        <item name="android:textColor">@color/black</item> <!-- Warna teks hari -->
+    </style>
+
+</resources>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/picrencanatrip"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/top_background"/>
+
+    <TextView
+        android:id="@+id/textrencanatrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:text="Silakan Isi\nRencana Perjalanan"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_bold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/picrencanatrip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tgltrip"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Pilih Tanggal Perjalanan"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <DatePicker
+                android:id="@+id/datetrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:layout_gravity="center" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/asal"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Asal"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/spinner_background"
+                android:id="@+id/spinasal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/inputpass"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Tujuan"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/spinner_background"
+                android:id="@+id/spintujuan"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/inputkelas"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Kelas Kereta"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/spinner_background"
+                android:id="@+id/spinkelas"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tambahan"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Paket Tambahan"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="Makan Siang"
+                        android:textOff="Makan Siang"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="Duduk Pinggir Jendela"
+                        android:textOff="Duduk Pinggir Jendela"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="Bagian Depan"
+                        android:textOff="Bagian Depan"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="Jasa Porter"
+                        android:textOff="Jasa Porter"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="Tambah Kopi"
+                        android:textOff="Tambah Kopi"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="Refill Es Teh"
+                        android:textOff="Refill Es Teh"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="Ekstra Bagasi"
+                        android:textOff="Ekstra Bagasi"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="Key Chain Kereta"
+                        android:textOff="Key Chain Kereta"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/harga"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Harga: Rp 0"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttoninput"
+                android:text="Dashboard"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
