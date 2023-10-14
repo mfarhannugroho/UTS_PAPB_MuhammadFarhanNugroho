@@ -41,9 +41,17 @@ class DashboardActivity : AppCompatActivity() {
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             // Check if the selectedDate matches the date clicked on the calendar
             if (selectedDate == "$year-${month + 1}-$dayOfMonth") {
-                Toast.makeText(this, "Ada Rencana Perjalan Untuk $year-${month + 1}-$dayOfMonth", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Ada Rencana Perjalan Untuk $year-${month + 1}-$dayOfMonth",
+                    Toast.LENGTH_SHORT
+                ).show()
             } else {
-                Toast.makeText(this, "Tidak Ada Perjalanan Untuk $year-${month + 1}-$dayOfMonth", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Tidak Ada Perjalanan Untuk $year-${month + 1}-$dayOfMonth",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
@@ -52,6 +60,20 @@ class DashboardActivity : AppCompatActivity() {
         rencanaButton.setOnClickListener {
             val intent = Intent(this, InputActivity::class.java)
             startActivity(intent)
+        }
+
+        // Inisialisasi tombol "Logout"
+        val logoutButton = findViewById<AppCompatButton>(R.id.button3)
+        logoutButton.setOnClickListener {
+            // Buat Intent untuk pindah ke LoginActivity
+            val intent = Intent(this, LoginActivity::class.java)
+
+            // Tambahkan flag untuk membersihkan aktivitas sebelumnya
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+            // Mulai LoginActivity dan hapus semua aktivitas sebelumnya
+            startActivity(intent)
+
         }
     }
 }

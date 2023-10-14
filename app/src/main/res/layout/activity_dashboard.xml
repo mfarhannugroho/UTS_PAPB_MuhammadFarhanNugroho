@@ -411,15 +411,35 @@
                 android:weekDayTextAppearance="@style/YourWeekDayTextAppearance" />
 
 
-            <androidx.appcompat.widget.AppCompatButton
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/button2"
-                android:text="Rencana Perjalanan"
-                android:background="@drawable/button_background"
-                android:layout_margin="24dp"
-                android:fontFamily="@font/poppins_bold"
-                android:textColor="@color/white"/>
+                android:orientation="horizontal"
+                android:layout_margin="24dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button2"
+                    android:text="Perjalanan"
+                    android:background="@drawable/button_background"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button3"
+                    android:text="Logout"
+                    android:background="@drawable/button_background"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
 
         </LinearLayout>
 
